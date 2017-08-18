@@ -5,7 +5,7 @@ var tooAdd = new Array;
 var numberInput = new Array;
 var one = 1;
 var highEnd = new Array;
-var result = new Array
+var result = [1];
 
 //function createArray() {
 
@@ -13,11 +13,13 @@ var result = new Array
 
 //}
 
-function createString() {
-  while (highEnd > one) {
-      one++;
-      return outArray.unshift(one);
-  };
+(function() {
+  while (true) {
+
+  }
+      result.push(one++);
+
+
 
 
 //  if (numberInput > 1) {
@@ -25,7 +27,7 @@ function createString() {
 //    numberInput -= 1 ;
 //  }
 
-};
+})();
 //do {
   //}while (numberInput > 1);
   //numberInput -= 1 ;
@@ -43,7 +45,7 @@ $(document).ready(function() {
     event.preventDefault();
 debugger
     var highEnd =  $("input.user-input").val();
-    result = createString(highEnd);
-    window.alert(result);
+
+    alert(result);
   });
  });
