@@ -1,3 +1,4 @@
+
 var numbersOutput = [];
 
 
@@ -6,9 +7,13 @@ var numbersOutput = [];
 
 function countUp(countNumber) {
   for (var i = 1; i <= countNumber; i++) {
+    if (i % 3 === 0) {
+      numbersOutput.push("ping");
+    } else {
 
-      numbersOutput.push(i);
+    numbersOutput.push(i);
     }
+  }
   return numbersOutput;
 }
 
