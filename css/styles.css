@@ -1,3 +1,17 @@
 h2{
-  font: bold
+  color: #412a9c
+}
+h1{
+  color: #1b66ff
+}
+h3{
+  color: #412a9c
+}
+.count{
+  font-size: 20px;
+  color: #1b66ff
+
+}
+body{
+  background-color: #00cef5
 }

@@ -1,4 +1,4 @@
-
+// business logic
 var numbersOutput = [];
 
 
@@ -7,9 +7,15 @@ var numbersOutput = [];
 
 function countUp(countNumber) {
   for (var i = 1; i <= countNumber; i++) {
-    if (i % 3 === 0) {
-      numbersOutput.push("ping");
-    } else {
+    if (i % 15 === 0) {
+      numbersOutput.push("PING-PONG");
+    } else if (i % 5 === 0){
+      numbersOutput.push("pOnG");
+    } else if (i % 3 === 0){
+      numbersOutput.push("PiNg");
+    }
+
+     else {
 
     numbersOutput.push(i);
     }
@@ -26,9 +32,7 @@ function countUp(countNumber) {
 
 
 
-
-
-// Interface Logic
+// user interface logic
 $(document).ready(function(){
   $("#userInput").submit(function(event){
     event.preventDefault();
