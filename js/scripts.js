@@ -1,51 +1,41 @@
-  // business logic
-
-var outArray = new Array;
-var tooAdd = new Array;
-var numberInput = new Array;
-var one = 1;
-var highEnd = new Array;
-var result = [1];
-
-//function createArray() {
-
-
-
-//}
-
-(function() {
-  while (true) {
-
-  }
-      result.push(one++);
+var numbersOutput = [];
 
 
 
 
-//  if (numberInput > 1) {
-//    outArray.push(numberInput);
-//    numberInput -= 1 ;
-//  }
 
-})();
-//do {
-  //}while (numberInput > 1);
-  //numberInput -= 1 ;
-  //return outArray.push(numberInput);
-//};
+function countUp(countNumber) {
+  for (var i = 1; i <= countNumber; i++) {
+
+      numbersOutput.push(i);
+    }
+  return numbersOutput;
+}
 
 
 
 
 
 
-// user interface logic
-$(document).ready(function() {
-  $("form#userInput").submit(function(event) {
+
+
+
+
+
+
+// Interface Logic
+$(document).ready(function(){
+  $("#userInput").submit(function(event){
     event.preventDefault();
-debugger
-    var highEnd =  $("input.user-input").val();
+    var countNumber = parseInt($("input#num").val());
+      $("#tooLow").hide();
+      var pingPongArray = countUp(countNumber);
+      $(".count").empty();
+      pingPongArray.forEach(function(value) {
+        $(".count").append("<li>" + value + "</li>");
+      });
+      $(".count").show()
 
-    alert(result);
+
   });
- });
+});
